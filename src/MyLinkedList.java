@@ -151,7 +151,7 @@ public class MyLinkedList<T> implements MyList<T> {
         @Override
         public int indexOf(Object o){
             Node current = head;
-            for (int i = 0; i < size; i++) {}
+            for(int i = 0; i < size; i++) {}
             return 0;
         }
 
