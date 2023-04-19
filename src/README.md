@@ -14,4 +14,7 @@ The class defines methods for various operations on the list:
 - remove(T item): removes the first occurrence of the specified item from the list. If the item is not found in the list, the method returns false. Otherwise, the method shifts all elements to the right of the removed element one position to the left to fill the gap.
 - remove(int index): removes the element at the specified index from the list. If the index is out of bounds, the method throws an IndexOutOfBoundsException. The method returns the removed element. The method shifts all elements to the right of the removed element one position to the left to fill the gap.
 - clear(): removes all elements from the list and sets the size to 0.
-- get(int index): returns the element at the specified index. If the index is out of bounds, the method throws an IndexOutOfBoundsException.
+- get(int index): returns the element at the specified index. If the index is out of bounds, the method throws an IndexOutOfBoundsException. 
+- indexOf(Object o): returns the index of the first occurrence of the specified object o in the list. If the object is not found in the list, the method returns -1.
+- lastIndexOf(Object o): returns the index of the last occurrence of the specified object o in the list. If the object is not found in the list, the method returns -1.
+- sort(): sorts the elements of the list in ascending order using the Arrays.sort() method.
