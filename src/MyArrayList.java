@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class MyArrayList<T> implements MyList<T> {
 
     private Object[] data;
@@ -14,19 +15,36 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public boolean contains(Object o) {
+        for (int i = 0; i < size; i++) {
+            if (o.equals(data[i])) {
+                return true;
+            }
+        }
         return false;
     }
 
     @Override
     public void add(T item) {
-
+        if (size == data.length) {
+            grow();
+        }
+        data[size++] = item;
     }
 
     @Override
-    public void add(T item, int index) {
-
+    public void add(T item, int index){
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException();
+        }
+        if (size == data.length) {
+            grow();
+        }
+        for (int i = size; i > index; i--) {
+            data[i] = data[i - 1];
+        }
+        data[index] = item;
+        size++;
     }
-
     @Override
     public boolean remove(T item) {
         return false;
