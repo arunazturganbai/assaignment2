@@ -81,23 +81,37 @@ public class MyArrayList<T> implements MyList<T> {
     }
 
     @Override
-    public T get(int index) {
-        return null;
+    public T get(int index){
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+        return (T) data[index];
     }
+
 
     @Override
     public int indexOf(Object o) {
-        return 0;
+        for (int i = 0; i < size; i++) {
+            if (o.equals(data[i])) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     @Override
     public int lastIndexOf(Object o) {
-        return 0;
+        for (int i = size - 1; i >= 0; i--) {
+            if (o.equals(data[i])) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     @Override
     public void sort() {
-
+        Arrays.sort(data, 0, size);
     }
 
     private void grow() {
