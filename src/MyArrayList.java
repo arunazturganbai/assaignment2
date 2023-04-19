@@ -100,5 +100,12 @@ public class MyArrayList<T> implements MyList<T> {
 
     }
 
+    private void grow() {
+        int newCapacity = data.length * 2;
+        Object[] newData = new Object[newCapacity];
+        System.arraycopy(data, 0, newData, 0, size);
+        data = newData;
+    }
+
 
 }
