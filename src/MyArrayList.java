@@ -47,17 +47,37 @@ public class MyArrayList<T> implements MyList<T> {
     }
     @Override
     public boolean remove(T item) {
+        for (int i = 0; i < size; i++) {
+            if (item.equals(data[i])) {
+                for (int j = i; j < size - 1; j++) {
+                    data[j] = data[j + 1];
+                }
+                data[--size] = null;
+                return true;
+            }
+        }
         return false;
     }
 
     @Override
     public T remove(int index) {
-        return null;
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+        T removed = (T) data[index];
+        for (int i = index; i < size - 1; i++) {
+            data[i] = data[i + 1];
+        }
+        data[--size] = null;
+        return removed;
     }
 
     @Override
     public void clear() {
-
+        for (int i = 0; i < size; i++) {
+            data[i] = null;
+        }
+        size = 0;
     }
 
     @Override
