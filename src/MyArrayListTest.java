@@ -29,5 +29,22 @@ public class MyArrayListTest {
         System.out.println("Element at index 1 before removal: " + myList.get(1));
         myList.remove(1);
         System.out.println("Element at index 1 after removal: " + myList.get(1));
+
+        myList.add(7);
+        myList.add(8);
+        System.out.println("Index of element 7: " + myList.indexOf(7));
+        System.out.println("Index of element 9: " + myList.indexOf(9));
+
+        myList.add(7);
+        myList.add(9);
+        System.out.println("Last index of element 7: " + myList.lastIndexOf(7));
+        System.out.println("Last index of element 10: " + myList.lastIndexOf(10));
+
+        myList.add(3);
+        myList.add(1);
+        myList.add(2);
+        System.out.println("Before sorting: " + myList);
+        myList.sort();
+        System.out.println("After sorting: " + myList);
     }
 }
