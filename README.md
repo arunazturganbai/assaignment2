@@ -1,4 +1,5 @@
-MyList
+MyLArrayList
+
 class called MyArrayList that implements the MyList interface. MyArrayList is a generic class, meaning that it can store elements of any type.
 
 The class has three instance variables:
