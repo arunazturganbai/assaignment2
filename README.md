@@ -1,3 +1,4 @@
+#MyList
 class called MyArrayList that implements the MyList interface. MyArrayList is a generic class, meaning that it can store elements of any type.
 
 The class has three instance variables:
@@ -21,8 +22,7 @@ The class defines methods for various operations on the list:
 - The private grow() method doubles the capacity of the data array and copies the existing elements into the new array using the System.arraycopy() method. 
 Overall, this code provides an implementation of a dynamic array-based list data structure with various operations to manipulate the list.
 
-MyLinkedList class 
-
+#MyLinkedList class 
 It's a generic class that implements the MyList interface.
 
 The class has a private inner class Node that represents the nodes in the linked list. Each node contains an element of type T, a reference to the next node, and a reference to the previous node.
