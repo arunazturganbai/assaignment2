@@ -1,4 +1,4 @@
-This code defines a class called MyArrayList that implements the MyList interface. MyArrayList is a generic class, meaning that it can store elements of any type.
+class called MyArrayList that implements the MyList interface. MyArrayList is a generic class, meaning that it can store elements of any type.
 
 The class has three instance variables:
 - data: an array of objects that stores the elements of the list
@@ -18,3 +18,6 @@ The class defines methods for various operations on the list:
 - indexOf(Object o): returns the index of the first occurrence of the specified object o in the list. If the object is not found in the list, the method returns -1.
 - lastIndexOf(Object o): returns the index of the last occurrence of the specified object o in the list. If the object is not found in the list, the method returns -1.
 - sort(): sorts the elements of the list in ascending order using the Arrays.sort() method.
+- The private grow() method doubles the capacity of the data array and copies the existing elements into the new array using the System.arraycopy() method.
+
+Overall, this code provides an implementation of a dynamic array-based list data structure with various operations to manipulate the list.
